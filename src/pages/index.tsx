@@ -12,10 +12,10 @@ export default function Home() {
         <title>Developing a accessible web</title>
       </Head>
       <header className={styles.header}>
-        <Image src={LogoImg} width={286 / 2} alt="Blog da Rocketseat" />
+        <Image src={LogoImg} width={286 / 2} alt="Rocketseat Blog" />
 
         <nav className={styles.nav}>
-          <a href="https://www.github.com/thefalked" aria-label="Acessar Github">
+          <a href="https://www.github.com/thefalked" aria-label="Access Github">
             <svg
               aria-hidden="true"
               stroke="#8257E6"
@@ -64,7 +64,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <Image src={LogoImg} width={286 / 2} alt="Blog da Rocketseat" />
+        <Image src={LogoImg} width={286 / 2} alt="Rocketseat Blog" />
 
         <nav className={styles.nav} aria-label="footer">
           <a href="https://www.github.com/thefalked">Terms of use</a>
