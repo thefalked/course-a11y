@@ -7,11 +7,11 @@ import LogoImg from "../assets/logo.svg";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleToggleModal = () => {
-    setIsModalOpen(oldState => !oldState);
-  }
+    setIsModalOpen((oldState) => !oldState);
+  };
 
   return (
     <>
@@ -79,9 +79,18 @@ export default function Home() {
       </footer>
 
       {isModalOpen && (
-        <div className={styles.modal} role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Description" tabIndex={-1}>
+        <div
+          className={styles.modal}
+          role="dialog"
+          aria-labelledby="modal1Title"
+          aria-describedby="modal1Description"
+          tabIndex={-1}
+        >
           <h2 id="modal1Title">Terms of use</h2>
-          <p id="modal1Description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, ipsa?</p>
+          <p id="modal1Description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Exercitationem, ipsa?
+          </p>
 
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi
