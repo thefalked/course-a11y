@@ -1,11 +1,18 @@
 import Head from "next/head";
 import Image from "next/image";
+import { useState } from "react";
 
 import LogoImg from "../assets/logo.svg";
 
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const handleToggleModal = () => {
+    setIsModalOpen(oldState => !oldState);
+  }
+
   return (
     <>
       <Head>
@@ -67,9 +74,22 @@ export default function Home() {
         <Image src={LogoImg} width={286 / 2} alt="Rocketseat Blog" />
 
         <nav className={styles.nav} aria-label="footer">
-          <a href="https://www.github.com/thefalked">Terms of use</a>
+          <button onClick={handleToggleModal}>Terms of use</button>
         </nav>
       </footer>
+
+      {isModalOpen && (
+        <div className={styles.modal} role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Description" tabIndex={-1}>
+          <h2 id="modal1Title">Terms of use</h2>
+          <p id="modal1Description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, ipsa?</p>
+
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi
+            aspernatur dolore quae dicta. Repellat quidem consequatur deleniti,
+            nesciunt error eaque!
+          </p>
+        </div>
+      )}
     </>
   );
 }
