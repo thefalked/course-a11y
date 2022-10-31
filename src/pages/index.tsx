@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 
 import LogoImg from "../assets/logo.svg";
@@ -7,6 +8,9 @@ import styles from "../styles/Home.module.css";
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Developing a accessible web</title>
+      </Head>
       <header className={styles.header}>
         <Image src={LogoImg} width={286 / 2} alt="Blog da Rocketseat" />
 
@@ -34,7 +38,7 @@ export default function Home() {
       <main className={styles.content}>
         <article>
           <header>
-            <h2>Developing a accessible content</h2>
+            <h2>Developing a accessible web</h2>
 
             <h4>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
@@ -63,7 +67,7 @@ export default function Home() {
         <Image src={LogoImg} width={286 / 2} alt="Blog da Rocketseat" />
 
         <nav className={styles.nav} aria-label="footer">
-          <a href="https://www.github.com/thefalked">Termos de uso</a>
+          <a href="https://www.github.com/thefalked">Terms of use</a>
         </nav>
       </footer>
     </>
