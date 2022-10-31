@@ -38,12 +38,12 @@ export default function Home() {
       <main className={styles.content}>
         <article>
           <header>
-            <h2>Developing a accessible web</h2>
+            <h1>Developing a accessible web</h1>
 
-            <h4>
+            <h2>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
               minima.
-            </h4>
+            </h2>
           </header>
 
           <p>
